@@ -18,4 +18,9 @@ public class PageBase {
 		jsExecutor = (JavascriptExecutor) driver;
 		
 	}
+	
+
+	public void closeBrowser() {
+		driver.quit();
+	}
 }

@@ -59,7 +59,4 @@ public class LoginPage extends PageBase {
 		return driver.getTitle();
 	}
 
-	public void closeBrowser() {
-		driver.quit();
-	}
 }

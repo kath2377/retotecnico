@@ -36,6 +36,7 @@ public class LoginSteps {
 	@Then("user should be on his profile page")
 	public void userShouldBeOnHisProfilePage() {
 		assertTrue(loginPage.getPageTitle().contains("Perfil"));
+		loginPage.closeBrowser();
 	}
 
 	@When("user tries to fill in password")
@@ -46,6 +47,7 @@ public class LoginSteps {
 	@Then("an error message should be displayed")
 	public void anErrorMessageShouldBeDisplayed() {
 		assertEquals("No se encontró cuenta asociada al correo.",loginPage.getEmailValidationMsg());
+		loginPage.closeBrowser();
 	}
 
 }
