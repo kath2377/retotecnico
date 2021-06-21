@@ -1,7 +1,5 @@
 package seleniumPages;
 
-import static org.junit.Assert.assertEquals;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -73,7 +71,7 @@ public class ManualRegistrationPage extends PageBase{
 
 		waitVar.until(ExpectedConditions.visibilityOfElementLocated(By.id("personal-info_firstName")));
 		System.out.println("encontro campo nombre");
-		Thread.sleep(1500);
+		Thread.sleep(2000);
 		jsExecutor.executeScript("arguments[0].scrollIntoViewIfNeeded();", driver.findElement(By.id("personal-info_firstName")));
 		driver.findElement(By.id("personal-info_firstName")).clear();
 		driver.findElement(By.id("personal-info_firstName")).sendKeys(firstName);
@@ -88,7 +86,7 @@ public class ManualRegistrationPage extends PageBase{
 		driver.findElement(By.id("birth-info_birthdate")).sendKeys(birthDate, Keys.RETURN);
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='male']")));
+		//waitVar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='male']")));
 		Thread.sleep(1500);
 		
 		driver.findElement(By.xpath("//input[@value='male']")).click();

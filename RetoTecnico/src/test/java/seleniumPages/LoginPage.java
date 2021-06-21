@@ -55,8 +55,5 @@ public class LoginPage extends PageBase {
 		waitVar.until(ExpectedConditions.titleContains("Magneto"));
 	}
 
-	public String getPageTitle() {
-		return driver.getTitle();
-	}
 
 }

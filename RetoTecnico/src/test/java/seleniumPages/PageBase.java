@@ -18,7 +18,9 @@ public class PageBase {
 		jsExecutor = (JavascriptExecutor) driver;
 		
 	}
-	
+	public String getPageTitle() {
+		return driver.getTitle();
+	}
 
 	public void closeBrowser() {
 		driver.quit();
