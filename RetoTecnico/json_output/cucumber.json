@@ -1,0 +1,93 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-06-21T11:11:50.226Z",
+        "line": 3,
+        "name": "Successful login",
+        "description": "",
+        "id": "login;successful-login",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 23667000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the Login page",
+            "match": {
+              "location": "stepDefinition.LoginSteps.userIsOnTheLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user fills in email with \"kjav2377@hotmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"kjav2377@hotmail.com\"",
+                  "offset": 25
+                }
+              ],
+              "location": "stepDefinition.LoginSteps.userFillsInEmailWith(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user fills in password with \"testing123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"testing123\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinition.LoginSteps.userFillsInPasswordWith(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user presses Submit",
+            "match": {
+              "location": "stepDefinition.LoginSteps.userPressesSubmit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user should be on his profile page",
+            "match": {
+              "location": "stepDefinition.LoginSteps.userShouldBeOnHisProfilePage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": []
+  }
+]
