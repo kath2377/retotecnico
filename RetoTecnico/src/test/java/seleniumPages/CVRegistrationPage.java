@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class CVRegistrationPage extends PageBase{
+public class CVRegistrationPage extends PageBase {
 
 	private String mainUrl = "https://www.choucairtesting.com/empleos-testing/";
 
@@ -18,7 +18,7 @@ public class CVRegistrationPage extends PageBase{
 		driver.findElement(By.partialLinkText("CONTINUAR")).click();
 
 	}
-	
+
 	public void fillCVRegistration(String firstName, String lastName, String email, String phone) {
 		waitVar.until(ExpectedConditions.visibilityOfElementLocated(By.id("candidate_first_name")));
 		WebElement inputElement = driver.findElement(By.id("candidate_first_name"));
@@ -27,8 +27,14 @@ public class CVRegistrationPage extends PageBase{
 		driver.findElement(By.id("candidate_last_name")).sendKeys(lastName);
 		driver.findElement(By.id("candidate_email")).sendKeys(email);
 		driver.findElement(By.id("candidate_phone")).sendKeys(phone);
+	}
+
+	public void submit() {
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(By.className("signup-country-container")));
-		
+	}
+	
+	public String getEmailValidationMsg() {
+		WebElement emailField = driver.findElement(By.id("candidate_email"));
+		return (String)jsExecutor.executeScript("return arguments[0].validationMessage;", emailField);
 	}
 }
